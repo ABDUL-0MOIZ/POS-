@@ -3,14 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/front%20end%20%20work/POS/src/screen_PENNAL/Report.java</file>
-            <file>file:/D:/front%20end%20%20work/POS/src/Sale_Mang.java</file>
-            <file>file:/D:/front%20end%20%20work/POS/src/entity/ReportList.java</file>
-            <file>file:/D:/front%20end%20%20work/POS/src/pos/POS.java</file>
-            <file>file:/D:/front%20end%20%20work/POS/src/screen_PENNAL/Product_Mang.java</file>
-            <file>file:/D:/front%20end%20%20work/POS/src/entity/Customer.java</file>
-            <file>file:/D:/front%20end%20%20work/POS/src/screen_PENNAL/Productinoventory.java</file>
-            <file>file:/D:/front%20end%20%20work/POS/src/screen_PENNAL/Dashbord.java</file>
+            <file>file:/D:/front%20end%20%20work/POS-/src/pos/POS.java</file>
+            <file>file:/D:/front%20end%20%20work/POS-/src/screen_PENNAL/Product_Mang.java</file>
+            <file>file:/D:/front%20end%20%20work/POS-/src/screen_PENNAL/Productinoventory.java</file>
+            <file>file:/D:/front%20end%20%20work/POS-/src/screen_PENNAL/Dashbord.java</file>
+            <file>file:/D:/front%20end%20%20work/POS-/src/screen_PENNAL/Report.java</file>
+            <file>file:/D:/front%20end%20%20work/POS-/src/entity/Store.java</file>
+            <file>file:/D:/front%20end%20%20work/POS-/src/entity/ReportList.java</file>
+            <file>file:/D:/front%20end%20%20work/POS-/src/screen_PENNAL/EmployDashbord.java</file>
+            <file>file:/D:/front%20end%20%20work/POS-/src/screen_PENNAL/Addmin.java</file>
         </group>
     </open-files>
 </project-private>

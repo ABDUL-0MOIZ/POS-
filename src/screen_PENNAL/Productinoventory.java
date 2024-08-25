@@ -7,6 +7,7 @@ package screen_PENNAL;
 import entity.Customer;
 import entity.Product;
 import entity.ReportList;
+import entity.Reportl;
 
 import entity.Store;
 import java.awt.event.KeyEvent;
@@ -273,7 +274,7 @@ public class Productinoventory extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel9)
@@ -287,15 +288,15 @@ public class Productinoventory extends javax.swing.JFrame {
                     .addComponent(payment)
                     .addComponent(Balance))
                 .addGap(49, 49, 49))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(129, 129, 129)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(121, 121, 121))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(41, 41, 41)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
                     .addComponent(Bill, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -307,9 +308,9 @@ public class Productinoventory extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Balance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
+                .addGap(18, 18, 18)
                 .addComponent(jButton3)
-                .addGap(24, 24, 24))
+                .addGap(38, 38, 38))
         );
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(678, 420, -1, 232));
@@ -475,6 +476,7 @@ public class Productinoventory extends javax.swing.JFrame {
 
     private void contityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contityActionPerformed
         // TODO add your handling code here:
+          
     }//GEN-LAST:event_contityActionPerformed
 
     private void PriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PriceActionPerformed
@@ -495,9 +497,23 @@ public class Productinoventory extends javax.swing.JFrame {
             p.setCatgory(catgory.getText().toString());
             p.setContity(Integer.parseInt(contity.getText()));
             p.setPrice(Integer.parseInt(Price.getText()));
-            obj.add(p);
+            
+          for(int i=0;i< Store.product.size();i++){
+            if(Store.product.get(i).getpNme().equals(p.getpNme())){
+        if( p.getContity() <=Store.product.get(i).getContity()){
+            int cont;
+           cont = ( Store.product.get(i).getContity() - p.getContity());
+            Store.product.get(i).setContity(cont);
+              obj.add(p);
             resetfields();
             setproductlist();
+        }
+        else{
+            Store.erorrmsg(p.getContity()+ "greater then over Stock" + Store.product.get(i).getContity());
+        }
+        }
+         }
+
 
         } else {
             Store.erorrmsg("Fill All the field");
@@ -550,7 +566,9 @@ public class Productinoventory extends javax.swing.JFrame {
     }//GEN-LAST:event_productlistMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+  
         // TODO add your handling code here:
+         
         long total = 0;
         int discount = 0;
         if (!cName.getText().isEmpty()) {
@@ -575,7 +593,10 @@ public class Productinoventory extends javax.swing.JFrame {
             c.setDicount(disount1);
             total = total - discount;
             Bill.setText(total + "");
-
+                 for(int i =0;i<obj.size();i++)
+                  {
+               Reportl.p.add(obj.get(i));
+                  }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -619,9 +640,9 @@ public class Productinoventory extends javax.swing.JFrame {
             cust.add(c);
             int flag = JOptionPane.showConfirmDialog(null, "are you went to add");
             if (flag == 0) {
-
-                ReportList.setList(cust);
-                ReportList.setProd(obj);
+ 
+                   ReportList.setList(cust);
+                
 
                 Store.erorrmsg("Added Sucessfully");
                 obj.removeAll(obj);
@@ -630,7 +651,6 @@ public class Productinoventory extends javax.swing.JFrame {
                 payment.setText("");
                 cName.setText("");
                 Balance.setText("");
-                
             } 
             else {
                 Store.erorrmsg("Fill the Enitr fild");

@@ -95,8 +95,8 @@ public class Product_Mang extends javax.swing.JFrame {
         Deletebtn = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
-        searchbtn = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        searchbtn = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -252,7 +252,7 @@ public class Product_Mang extends javax.swing.JFrame {
                 EditbtnActionPerformed(evt);
             }
         });
-        getContentPane().add(Editbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(179, 175, -1, 46));
+        getContentPane().add(Editbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, -1, 46));
 
         Deletebtn.setText("Delete");
         Deletebtn.addActionListener(new java.awt.event.ActionListener() {
@@ -260,7 +260,7 @@ public class Product_Mang extends javax.swing.JFrame {
                 DeletebtnActionPerformed(evt);
             }
         });
-        getContentPane().add(Deletebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(323, 175, -1, 46));
+        getContentPane().add(Deletebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 180, -1, 46));
 
         jPanel2.setBackground(new java.awt.Color(25, 34, 47));
 
@@ -270,20 +270,35 @@ public class Product_Mang extends javax.swing.JFrame {
         jLabel8.setText("POINT OF SALE SYSTEM");
         jLabel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
 
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pos/assit/left-arrow (1).png"))); // NOI18N
+        jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(490, 490, 490)
+                .addGap(25, 25, 25)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(427, 427, 427)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(533, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -296,14 +311,6 @@ public class Product_Mang extends javax.swing.JFrame {
             }
         });
         getContentPane().add(searchbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(308, 135, -1, -1));
-
-        jButton2.setText("back");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, 40));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pos/assit/wp2508260.jpg"))); // NOI18N
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 1330, 560));

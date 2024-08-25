@@ -17,11 +17,11 @@ import javax.swing.JOptionPane;
 public class ReportList {
 
     public static ArrayList<Customer> List;
-     public static ArrayList<Product> prod;
+  
 
    static {
         List=new ArrayList();
-      prod = new ArrayList();     
+          
     }
 
      public static void add(Customer obj){
@@ -42,16 +42,6 @@ public class ReportList {
     public static void setList(ArrayList<Customer> List) {
         ReportList.List = List;
     }
-      public  static void setProd(ArrayList<Product> prod) {
-          
-       ReportList.prod = prod;
-    }
-
-    public static ArrayList<Product> getProd() {
-        return prod;
-    }
-
-
 
     
 }

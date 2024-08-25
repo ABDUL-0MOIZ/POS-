@@ -34,7 +34,8 @@ public class Store {
    public static boolean checklogin(Employ emp){
        for(int i=0;i<Emp.size();i++){
            if(!Emp.get(i).getName().equalsIgnoreCase(emp.getName())||!Emp.get(i).getPassword().equalsIgnoreCase(emp.getPassword())){
-           return true;
+          Store.empl=emp;
+               return true;
            } 
        }
        return false;
@@ -90,9 +91,7 @@ public class Store {
      JOptionPane.showMessageDialog(null, msg);
  }
 
-    public static String emplgetPassword() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+   
 
 
  }
